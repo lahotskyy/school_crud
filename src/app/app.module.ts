@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { StudentListComponent } from './student/student-list.component';
 import { StudentService } from './student/student.service';
 import { StudentDetailComponent } from './student/student-detail.component';
+import { TeacherListComponent } from './teacher/teacher-list.component';
+import { TeacherService } from './teacher/teacher.service';
+import { TeacherDetailComponent } from './teacher/teacher-detail.component';
+
 import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
-    StudentDetailComponent
+    StudentDetailComponent,
+    TeacherListComponent,
+    TeacherDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +27,10 @@ import { routing } from './app.routes';
     HttpModule,
     routing
   ],
-  providers: [StudentService],
+  providers: [
+    StudentService,
+    TeacherService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

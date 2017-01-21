@@ -6,13 +6,16 @@ import { StudentService } from './student.service';
 
 @Component({
   selector: 'app-student-list',
-  template: `
-    <p *ngFor="let student of students">
-    {{student.first_name}} {{student.last_name}} {{student.age}}
-    </p>
-    <app-student-detail></app-student-detail>
-  `,
-  styles: []
+  templateUrl: './student-list.component.html',
+  styles: [`
+      table {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+      th, td {
+        border: 1px solid black;
+      }
+  `]
 })
 export class StudentListComponent implements OnInit {
 
@@ -20,11 +23,15 @@ export class StudentListComponent implements OnInit {
 
   constructor(private studentService: StudentService) { }
 
-  getStudents() {
-    this.studentService.getStudents().then(students => this.students = students);
-  }
   ngOnInit() {
     this.getStudents();
   }
 
+  getStudents() {
+    this.studentService.getStudents()
+                       .subscribe(
+                         data => this.students = data,
+                         err => console.error(err)
+                        );
+  }
 }

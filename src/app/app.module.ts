@@ -10,6 +10,7 @@ import { StudentDetailComponent } from './student/student-detail.component';
 import { TeacherListComponent } from './teacher/teacher-list.component';
 import { TeacherService } from './teacher/teacher.service';
 import { TeacherDetailComponent } from './teacher/teacher-detail.component';
+import { HomeComponent } from './home.component';
 
 import { routing } from './app.routes';
 
@@ -19,7 +20,8 @@ import { routing } from './app.routes';
     StudentListComponent,
     StudentDetailComponent,
     TeacherListComponent,
-    TeacherDetailComponent
+    TeacherDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -7,11 +7,11 @@ import { TeacherService } from './teacher.service';
 @Component({
   selector: 'app-teacher-list',
   template: `
-    <p *ngFor="let teacher of teachers">
+    <h2>Teacher list</h2>
+    <div *ngFor="let teacher of teachers">
     {{teacher.first_name}} {{teacher.last_name}} {{teacher.group}}
-    </p>
-    <app-teacher-detail></app-teacher-detail>
-  `,
+    </div>
+    `,
   styles: []
 })
 export class TeacherListComponent implements OnInit {

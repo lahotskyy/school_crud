@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Teacher } from './teacher.model';
-import { TeacherDetailComponent } from './teacher-detail.component';
 import { TeacherService } from './teacher.service';
 
 

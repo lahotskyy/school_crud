@@ -1,13 +1,13 @@
 <h2>Student list</h2>
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Last name</th>
-    <th>Age</th>
-  </tr>
-  <tr *ngFor="let student of students">
-    <td [routerLink]="['/students', student.id]">{{student.first_name}}</td>
-    <td>{{student.last_name}}</td>
-    <td>{{student.age}}</td>
-  </tr>
-</table>
+  <button md-button [routerLink]="['/students/new']">Add New Student</button>
+<md-card>
+  <md-list class="app-list">
+    <md-list-item *ngFor="let student of students">
+      <h3 md-line [routerLink]="['/students', student.id]">Name: {{student.first_name}} </h3>
+      <p md-line>Surname: {{student.last_name}} </p>
+      <p md-line > Age: {{student.age}} </p>
+      <button md-button [routerLink]="['/students', student.id]">Edit</button>
+      <button md-raised-button color="accent" [routerLink]="['/students', student.id]">Delete</button>
+    </md-list-item>
+  </md-list>
+</md-card>

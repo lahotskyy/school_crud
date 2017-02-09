@@ -6,15 +6,7 @@ import { StudentService } from './student.service';
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
-  styles: [`
-      table {
-        border-collapse: collapse;
-        border: 1px solid black;
-      }
-      th, td {
-        border: 1px solid black;
-      }
-  `]
+  styles: []
 })
 export class StudentListComponent implements OnInit {
 
